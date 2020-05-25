@@ -39,7 +39,7 @@ public class JpaMappingTest {
         .build());
 
         boardRepository.save(Board.builder()
-        .title("boardTestTitle")
+        .title(boardTestTitle)
         .subTitle("서브 타이틀")
         .content("콘텐츠")
         .boardType(BoardType.free)
@@ -59,6 +59,6 @@ public class JpaMappingTest {
         assertThat(board.getSubTitle(), is("서브 타이틀"));
         assertThat(board.getContent(), is("콘텐츠"));
         assertThat(board.getBoardType(), is(BoardType.free));
-        
+
     }
 }
